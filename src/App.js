@@ -46,9 +46,7 @@ function App(){
   return(
     <div className="app">
       <h1>Gerador de fotos com IA</h1>
-      {pessoas &&
       <Robot/>
-      }
       {carregando &&
         <img src={Loading} title="Aguarde..." alt="Aguarde" width="70"/>
       }
@@ -56,7 +54,6 @@ function App(){
         <ListaPessoas pessoas={pessoas}/>
       </div>
 
-      {pessoas &&
       <div className="row">
         <div className="filter">
           <label>Idade:</label>
@@ -81,7 +78,7 @@ function App(){
           </select>
         </div>
       </div>
-      }
+
 
       <div className="row">
         <button type="button" onClick={obtemFoto}>
